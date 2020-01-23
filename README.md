@@ -62,3 +62,34 @@ public class Person
     public static int PeopleCount = 0;
 }
 ```
+___
+
+# Constructors
+- A method that is called when an instance of a class is created
+- Its to put an object in an early state
+
+example:
+```
+public class Customer
+{
+    public string Name;
+    
+    public Customer(string Name)
+    {
+       this.Name = name;
+    }
+}
+```
+
+**Constructors Overloading**
+```
+public class Customer
+{
+    public string Name;
+    
+    public Customer(string Name)
+    {
+       this.Name = name;
+    }
+}
+```
