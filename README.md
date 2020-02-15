@@ -93,3 +93,41 @@ public class Customer
     }
 }
 ```
+___
+# Object Initializers
+- a syntax for quickly initialising an object without the need to call one of its constructors.
+- to avoid creating multiple constructors.
+
+```
+public class Person
+{
+  public int Id;
+  
+  public string FirstName;
+  
+  public string LastName;
+  
+  public DateTime Birthdate;
+}
+```
+- creating construtors to initialize the fields
+```
+public class Person
+{
+  public Person(int id) {}
+  
+  public Person(int id, string firstName) {}
+  
+  public Person(int id, string firstName, string lastName) {}
+  
+  public Person(int id, DateTime Birthdate) {}
+}
+```
+- initialize a person object
+```
+var person = new Person
+             {
+                FirstName = "Jackie";
+                LastName = "Gut"
+              };
+```
