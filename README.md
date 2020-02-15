@@ -131,3 +131,88 @@ var person = new Person
                 LastName = "Gut"
               };
 ```
+___
+
+# Methods
+**Signature of a Method**
+- Name
+- Number and Type of parameters
+```
+public class Point
+{
+   public void Move(int x, int y) {}
+}
+```
+**Overloading Methods**
+- Having a method with the same name but different signatures
+```
+public class Point
+{
+  public void Move(int x, int y) {}
+  
+  public void Move(Point new Location) {}
+  
+  public void Move(Point new Location, int speed) {}
+}
+```
+- A method with varying number of parameters
+```
+public class Calcultor
+{
+  public int Add(int n1, int n2) {}
+  public int Add(int n1, int n2, int n3) {}
+  public int Add(int n1, int n2, int n3, int n4) {}
+}
+```
+```
+public class Calcultor
+{
+  public int Add(int[] numbers) {}
+}
+
+var result = calcultor.Add(new int[] {1 ,2, 3, 4});
+```
+**The Params Modifier**
+```
+public class Calcultor
+{
+  public int Add(params int[] numbers) {}
+}
+var result = calcultor.Add(new int[] {1 ,2, 3, 4});
+var result = calcultor.Add(1 ,2, 3, 4);
+```
+**The Ref Modifier**
+```
+public class MyClass
+{
+  public void MyMethod(int a)
+  {
+    a+= 2;
+  }
+}
+var a = 1;
+myClass.MyMethod(a);
+```
+```
+public class Weirdo
+{
+  public void DoAWeirdThing(ref int a)
+  {
+    a += 2;
+  }
+}
+var a = 1;
+weirdo.DoAWeirdThing(ref a);
+```
+**The Out Modifier**
+```
+public class MyClass
+{
+  public void MyMethod(out int result)
+  {
+    result = 1;
+  }
+}
+int a;
+myClass.MyMethod(out a);
+```
