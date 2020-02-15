@@ -11,17 +11,13 @@ namespace CsharpFundamentals
     {
         static void Main(string[] args)
         {
-            //var customer = new Customer(1, "John");
-            var customer = new Customer();
-            customer.Id = 1;
-            customer.Name = "John";
+            var point = new Point(10, 20);
             
-            var order = new Order();
-            customer.Orders.Add(order);
+            point.Move(new Point(40,60));
+            Console.Write("Point is at ({0}, {1})", point.X, point.Y);
             
-            Console.WriteLine(customer.Id);
-            Console.WriteLine(customer.Name);
-
+            point.Move(100, 200);
+            Console.Write("Point is at ({0}, {1})", point.X, point.Y);
         }
     }
 }
